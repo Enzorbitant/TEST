@@ -1,1 +1,382 @@
-local K7vN2xP9=game:GetService("\82\101\112\108\105\99\97\116\101\100\83\116\111\114\97\103\101") local J4mQ8rT3=game:GetService("\80\108\97\121\101\114\115") local Z9pL6wM2=J4mQ8rT3.LocalPlayer if not Z9pL6wM2 then warn("\76\111\99\97\108\80\108\97\121\101\114\32\110\111\116\32\102\111\117\110\100\46\32\80\108\101\97\115\101\32\119\97\105\116\32\117\110\116\105\108\32\102\117\108\108\121\32\108\111\97\100\101\100\46") return end local function X3qT9fN4(W2kR7vB1) if W2kR7vB1 and typeof(W2kR7vB1)=="\73\110\115\116\97\110\99\101" then local Y6nF2mP8, H5jL3xK9=pcall(require,W2kR7vB1) if Y6nF2mP8 then return H5jL3xK9 else warn("\70\97\105\108\101\100\32\116\111\32\114\101\113\117\105\114\101\32\109\111\100\117\108\101\58\32"..tostring(H5jL3xK9)) end end return nil end local Q8rM4tV7=K7vN2xP9:FindFirstChild("\67\108\105\101\110\116") and K7vN2xP9.Client:FindFirstChild("\84\117\116\111\114\105\97\108") if not Q8rM4tV7 then warn("\84\117\116\111\114\105\97\108\32\109\111\100\117\108\101\32\110\111\116\32\102\111\117\110\100\32\105\110\32\82\101\112\108\105\99\97\116\101\100\83\116\111\114\97\103\101\46\67\108\105\101\110\116\46\84\117\116\111\114\105\97\108") return end local P2wN6kJ3=X3qT9fN4(Q8rM4tV7) if not P2wN6kJ3 then warn("\67\111\117\108\100\32\110\111\116\32\108\111\97\100\32\84\117\116\111\114\105\97\108\32\109\111\100\117\108\101") return end local T5yH8mR1=K7vN2xP9:FindFirstChild("\67\108\105\101\110\116") and K7vN2xP9.Client:FindFirstChild("\70\114\97\109\101\119\111\114\107") and K7vN2xP9.Client.Framework:FindFirstChild("\83\101\114\118\105\99\101\115") and K7vN2xP9.Client.Framework.Services:FindFirstChild("\76\111\99\97\108\68\97\116\97") if not T5yH8mR1 then warn("\76\111\99\97\108\68\97\116\97\32\109\111\100\117\108\101\32\110\111\116\32\102\111\117\110\100\32\105\110\32\82\101\112\108\105\99\97\116\101\100\83\116\111\114\97\103\101\46\67\108\105\101\110\116\46\70\114\97\109\101\119\111\114\107\46\83\101\114\118\105\99\101\115\46\76\111\99\97\108\68\97\116\97") return end local F9xL3qW2=X3qT9fN4(T5yH8mR1) if not F9xL3qW2 then warn("\67\111\117\108\100\32\110\111\116\32\108\111\97\100\32\76\111\99\97\108\68\97\116\97\32\109\111\100\117\108\101") return end local M6tR2nK8=F9xL3qW2:Get() if not M6tR2nK8 then warn("\70\97\105\108\101\100\32\116\111\32\114\101\116\114\105\101\118\101\32\112\108\97\121\101\114\32\100\97\116\97") return end if not M6tR2nK8.QuestsCompleted then M6tR2nK8.QuestsCompleted={} end local B4kP7vN3=10 for i=1,B4kP7vN3 do M6tR2nK8.QuestsCompleted["\116\117\116\111\114\105\97\108\45"..i]=true end local N8jQ5mT6,E2wR9fL1=pcall(function() if F9xL3qW2.set then F9xL3qW2:set(M6tR2nK8) else warn("\76\111\99\97\108\68\97\116\97\58\115\101\116\32\109\101\116\104\111\100\32\110\111\116\32\102\111\117\110\100\46\32\65\118\97\105\108\97\98\108\101\32\109\101\116\104\111\100\115\58\32"..table.concat({next(F9xL3qW2) or "\110\111\110\101"},"\44\32")) end end) if not N8jQ5mT6 then warn("\70\97\105\108\101\100\32\116\111\32\117\112\100\97\116\101\32\112\108\97\121\101\114\32\100\97\116\97\58\32"..tostring(E2wR9fL1)) end if P2wN6kJ3.Active~=nil then P2wN6kJ3.Active=false end if P2wN6kJ3.Finished then local V3rT8xM7,C9pL2qN4=pcall(function() P2wN6kJ3.Finished:Fire() end) if not V3rT8xM7 then warn("\70\97\105\108\101\100\32\116\111\32\102\105\114\101\32\70\105\110\105\115\104\101\100\32\115\105\103\110\97\108\58\32"..tostring(C9pL2qN4)) end end local D6nF4kJ2=Z9pL6wM2:FindFirstChild("\80\108\97\121\101\114\71\117\105") and Z9pL6wM2.PlayerGui:FindFirstChild("\83\99\114\101\101\110\71\117\105") if D6nF4kJ2 then local H7tQ3mR9=D6nF4kJ2:FindFirstChild("\72\85\68") local G5yW8vP1=D6nF4kJ2:FindFirstChild("\78\111\116\105\102\105\99\97\116\105\111\110\115") if H7tQ3mR9 and H7tQ3mR9:FindFirstChild("\84\117\116\111\114\105\97\108") then H7tQ3mR9.Tutorial.Visible=false end if G5yW8vP1 and G5yW8vP1:FindFirstChild("\84\117\116\111\114\105\97\108") then G5yW8vP1.Tutorial.Visible=false end end local L2rK9xT4=workspace:FindFirstChild("\82\101\110\100\101\114\101\100") and workspace.Rendered:FindFirstChild("\71\101\110\101\114\105\99") if L2rK9xT4 then local U8jM3qW5=L2rK9xT4:FindFirstChild("\84\117\116\111\114\105\97\108") if U8jM3qW5 then local I4nF7vP2,O6tR1mK8=pcall(function() U8jM3qW5:Destroy() end) if not I4nF7vP2 then warn("\70\97\105\108\101\100\32\116\111\32\100\101\115\116\114\111\121\32\84\117\116\111\114\105\97\108\32\104\105\103\104\108\105\103\104\116\58\32"..tostring(O6tR1mK8)) end end end local A3yH5kJ9={workspace.Rendered:GetChildren()[13] and workspace.Rendered:GetChildren()[13]:GetChildren()[26] and workspace.Rendered:GetChildren()[13]:GetChildren()[26].Prompt.Tutorial,workspace.Rendered:GetChildren()[13] and workspace.Rendered:GetChildren()[13]:GetChildren()[21] and workspace.Rendered:GetChildren()[13]:GetChildren()[21].Prompt.Tutorial,workspace.Worlds["\84\104\101\32\79\118\101\114\119\111\114\108\100"].Islands["\79\117\116\101\114\32\83\112\97\99\101"].Island.DoggyJump.Activation.Root.Tutorial,workspace.Worlds["\84\104\101\32\79\118\101\114\119\111\114\108\100"].Islands["\79\117\116\101\114\32\83\112\97\99\101"].Island.Shop.Root.Tutorial,workspace.Worlds["\84\104\101\32\79\118\101\114\119\111\114\108\100"].Islands.Twilight.Island.Sell.Root.Tutorial,workspace.Worlds["\84\104\101\32\79\118\101\114\119\111\114\108\100"].Sell.Root.Tutorial,workspace.Worlds["\84\104\101\32\79\118\101\114\119\111\114\108\100"].Shop.Root.Tutorial,workspace.Event.View.Root.Tutorial} for _,E9pL2xM6 in ipairs(A3yH5kJ9) do if E9pL2xM6 and typeof(E9pL2xM6)=="\73\110\115\116\97\110\99\101" then local S7qT4nF8,R1wN6kJ3=pcall(function() E9pL2xM6:Destroy() end) if not S7qT4nF8 then warn("\70\97\105\108\101\100\32\116\111\32\100\101\115\116\114\111\121\32\116\117\116\111\114\105\97\108\32\111\98\106\101\99\116\32\97\116\32"..tostring(E9pL2xM6).."\58\32"..tostring(R1wN6kJ3)) end end end print("\84\117\116\111\114\105\97\108\115\32\115\107\105\112\112\101\100\32\115\117\99\99\101\115\115\102\117\108\108\121\33")
+-- Bubble Gum Simulator Infinity - One-Click Grind Script
+-- GUI déplaçable, fermable, avec config personnalisable
+-- Compatible avec SWIFT Executor
+
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
+local TweenService = game:GetService("TweenService")
+local HttpService = game:GetService("HttpService")
+local Player = Players.LocalPlayer
+
+-- Configuration par défaut
+getgenv().bgsInfConfig = {
+    AUTO_UPDATE_RESTART = true,
+    PURCHASE_ALIENSHOP = true,
+    PURCHASE_BLACKMARKET = true,
+    RESTOCK_SHOP = "shard-shop", -- Blackmarket
+    USE_ROYAL_KEY = true,
+    USE_GOLDEN_KEY = true,
+    USE_MYSTERY_BOX = true,
+    RARITY_TO_DELETE = {"Common", "Unique", "Rare"},
+    LEGENDARY_TIER_TO_DELETE = 2,
+    ENCHANT_TEAMUP = true,
+    ENCHANT_TEAMUP_TIER = 1,
+    RIFT_EGGS = {"Nightmare Egg", "Rainbow Egg"},
+    HATCH_1X_EGG = "Hell Egg",
+    DO_BUBBLE_GUM = true,
+    IGNORE_MYSTERY_BOX_GEM_CAP = false,
+    HATCH_INFERNO_CUBE_AMOUNT = 6,
+    MASTERY_BUFFS_LEVEL = 15,
+    IGNORE_STARTER_HATCH = false,
+    POTIONS_TO_CRAFT = {"Coins", "Lucky", "Speed", "Mythic"},
+    FARM_MIN_GEMS = 1000000,
+    MIN_COINS_BEFORE_HATCHING = 3000000000
+}
+
+-- Variables globales
+local RemoteEvent = ReplicatedStorage.Shared.Framework.Network.Remote.Event
+local RemoteFunction = ReplicatedStorage.Shared.Framework.Network.Remote.Function
+local PlayerDataChanged = ReplicatedStorage.Remotes.PlayerDataChanged
+local Active = false
+local PetInventory = {} -- Simulé pour l'exemple
+local CurrentCoins = 0
+local CurrentGems = 0
+local CurrentIsland = "Main" -- Île actuelle
+
+-- Création du GUI
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "BSGInfinityGrind"
+ScreenGui.Parent = Player:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+local MainFrame = Instance.new("Frame")
+MainFrame.Size = UDim2.new(0, 400, 0, 500)
+MainFrame.Position = UDim2.new(0.5, -200, 0.5, -250)
+MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+MainFrame.BorderSizePixel = 0
+MainFrame.Parent = ScreenGui
+MainFrame.Active = true
+MainFrame.Draggable = true
+
+local Corner = Instance.new("UICorner")
+Corner.CornerRadius = UDim.new(0, 10)
+Corner.Parent = MainFrame
+
+local Title = Instance.new("TextLabel")
+Title.Size = UDim2.new(1, 0, 0, 40)
+Title.BackgroundTransparency = 1
+Title.Text = "BSG Infinity One-Click Grind"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 20
+Title.Font = Enum.Font.SourceSansBold
+Title.Parent = MainFrame
+
+local CloseButton = Instance.new("TextButton")
+CloseButton.Size = UDim2.new(0, 30, 0, 30)
+CloseButton.Position = UDim2.new(1, -35, 0, 5)
+CloseButton.BackgroundColor3 = Color3.fromRGB(255, 60, 60)
+CloseButton.Text = "X"
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.TextSize = 16
+CloseButton.Font = Enum.Font.SourceSansBold
+CloseButton.Parent = MainFrame
+
+local CloseCorner = Instance.new("UICorner")
+CloseCorner.CornerRadius = UDim.new(0, 5)
+CloseCorner.Parent = CloseButton
+
+local ToggleButton = Instance.new("TextButton")
+ToggleButton.Size = UDim2.new(0.9, 0, 0.1, 0)
+ToggleButton.Position = UDim2.new(0.05, 0, 0.85, 0)
+ToggleButton.BackgroundColor3 = Color3.fromRGB(60, 160, 60)
+ToggleButton.Text = "ACTIVER"
+ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToggleButton.TextSize = 16
+ToggleButton.Font = Enum.Font.SourceSansBold
+ToggleButton.Parent = MainFrame
+
+local ToggleCorner = Instance.new("UICorner")
+ToggleCorner.CornerRadius = UDim.new(0, 5)
+ToggleCorner.Parent = ToggleButton
+
+-- Liste des îles
+local Islands = {
+    "Floating Island",
+    "Outer Space",
+    "Twilight",
+    "The Void",
+    "Zen"
+}
+
+-- Liste des œufs
+local Eggs = {
+    {Name = "Common Egg", Cost = 10},
+    {Name = "Spotted Egg", Cost = 110},
+    {Name = "Iceshard Egg", Cost = 450},
+    {Name = "Spikey Egg", Cost = 5000},
+    {Name = "Magma Egg", Cost = 15000},
+    {Name = "Crystal Egg", Cost = 75000},
+    {Name = "Lunar Egg", Cost = 100000},
+    {Name = "Void Egg", Cost = 175000},
+    {Name = "Hell Egg", Cost = 300000},
+    {Name = "Nightmare Egg", Cost = 900000},
+    {Name = "Rainbow Egg", Cost = 1500000}
+}
+
+-- Liste des potions
+local Potions = {
+    "Lucky", "Speed", "Coins", "Mythic"
+}
+
+-- Fonction pour obtenir les données du joueur
+local function UpdatePlayerData()
+    local success, result = pcall(function()
+        return PlayerDataChanged:InvokeServer()
+    end)
+    if success then
+        CurrentCoins = result.Coins or 0
+        CurrentGems = result.Gems or 0
+        -- Simuler l'inventaire (à remplacer par la vraie logique)
+        PetInventory = result.Pets or {}
+    end
+end
+
+-- Fonction pour déverrouiller les îles
+local function UnlockIslands()
+    for _, island in ipairs(Islands) do
+        local hitbox = Workspace.Worlds["The Overworld"].Islands[island].Island.UnlockHitbox
+        if hitbox then
+            local character = Player.Character
+            if character and character:FindFirstChild("HumanoidRootPart") then
+                character.HumanoidRootPart.CFrame = hitbox.CFrame
+                wait(1)
+            end
+        end
+    end
+end
+
+-- Fonction pour souffler et vendre du chewing-gum
+local function AutoBlowSell()
+    if not bgsInfConfig.DO_BUBBLE_GUM or CurrentCoins >= bgsInfConfig.MIN_COINS_BEFORE_HATCHING then
+        return
+    end
+    RemoteEvent:FireServer("BlowBubble")
+    wait(0.5)
+    RemoteEvent:FireServer("SellBubble")
+end
+
+-- Fonction pour acheter des saveurs et stockage
+local function AutoBuyFlavorsStorage()
+    if CurrentCoins >= 1000 then
+        RemoteEvent:FireServer("GumShopPurchase", "Lemon")
+        wait(0.2)
+        RemoteEvent:FireServer("GumShopPurchase", "Unreal Gum")
+    end
+end
+
+-- Fonction pour équiper les meilleurs pets
+local function AutoEquipPets()
+    RemoteEvent:FireServer("EquipBestPets")
+end
+
+-- Fonction pour enchanter les pets
+local function AutoEnchantPets()
+    if bgsInfConfig.ENCHANT_TEAMUP then
+        for _, pet in pairs(PetInventory) do
+            if pet.Tier >= bgsInfConfig.ENCHANT_TEAMUP_TIER then
+                RemoteFunction:InvokeServer("RerollEnchants", pet.ID)
+                wait(0.2)
+            end
+        end
+    end
+end
+
+-- Fonction pour supprimer les pets de faible rareté
+local function AutoDeletePets()
+    for _, pet in pairs(PetInventory) do
+        if table.find(bgsInfConfig.RARITY_TO_DELETE, pet.Rarity) or (pet.Rarity == "Legendary" and pet.Tier <= bgsInfConfig.LEGENDARY_TIER_TO_DELETE) then
+            RemoteEvent:FireServer("DeletePet", pet.ID, 1, false)
+            wait(0.2)
+        end
+    end
+end
+
+-- Fonction pour hacher les œufs
+local function AutoHatchEggs()
+    local eggToHatch = bgsInfConfig.HATCH_1X_EGG
+    if CurrentCoins < bgsInfConfig.MIN_COINS_BEFORE_HATCHING then
+        for _, egg in ipairs(Eggs) do
+            if CurrentCoins >= egg.Cost then
+                eggToHatch = egg.Name
+                break
+            end
+        end
+    end
+    if table.find(bgsInfConfig.RIFT_EGGS, eggToHatch) then
+        RemoteEvent:FireServer("HatchEgg", eggToHatch, 3)
+    else
+        RemoteEvent:FireServer("HatchEgg", eggToHatch, 1)
+    end
+    wait(1)
+end
+
+-- Fonction pour acheter dans les boutiques
+local function AutoBuyShops()
+    if bgsInfConfig.PURCHASE_ALIENSHOP then
+        for i = 1, 3 do
+            RemoteEvent:FireServer("BuyShopItem", "alien-shop", i)
+            wait(0.2)
+        end
+    end
+    if bgsInfConfig.PURCHASE_BLACKMARKET then
+        for i = 1, 3 do
+            RemoteEvent:FireServer("BuyShopItem", "shard-shop", i)
+            wait(0.2)
+        end
+    end
+end
+
+-- Fonction pour fabriquer et consommer des potions
+local function AutoPotions()
+    for _, potion in ipairs(bgsInfConfig.POTIONS_TO_CRAFT) do
+        for tier = 1, 5 do
+            RemoteEvent:FireServer("CraftPotion", potion, tier, false)
+            wait(0.2)
+            RemoteEvent:FireServer("UsePotion", potion, tier)
+            wait(0.2)
+        end
+    end
+end
+
+-- Fonction pour consommer les power-ups
+local function AutoConsumePowerups()
+    RemoteEvent:FireServer("UsePowerOrb", "72136f64-3e1d-4b8b-9b31-374440caaee8")
+    wait(0.5)
+end
+
+-- Fonction pour ouvrir les Mystery Boxes
+local function AutoMysteryBox()
+    if bgsInfConfig.USE_MYSTERY_BOX then
+        RemoteEvent:FireServer("UseGift", "Mystery Box", 10)
+        wait(0.5)
+    end
+end
+
+-- Fonction pour utiliser les tickets
+local function AutoTickets()
+    RemoteEvent:FireServer("ClaimFreeWheelSpin")
+    wait(0.5)
+end
+
+-- Fonction pour hacher les œufs saisonniers
+local function AutoHatchSeasonEggs()
+    RemoteEvent:FireServer("HatchPowerupEgg", "Season 1 Egg", 3)
+    wait(1)
+end
+
+-- Fonction pour ouvrir les Golden Orbs
+local function AutoGoldenOrbs()
+    RemoteEvent:FireServer("UseGoldenOrb")
+    wait(0.5)
+end
+
+-- Fonction pour réclamer les prix
+local function AutoClaimPrizes()
+    for i = 1, 20 do
+        RemoteEvent:FireServer("ClaimPrize", i)
+        wait(0.2)
+    end
+end
+
+-- Fonction pour tourner la roue
+local function AutoSpinWheel()
+    RemoteFunction:InvokeServer("WheelSpin")
+    wait(0.5)
+end
+
+-- Fonction pour ouvrir les coffres
+local function AutoOpenChests()
+    RemoteEvent:FireServer("ClaimChest", "Giant Chest")
+    wait(0.5)
+end
+
+-- Fonction pour réclamer les cadeaux
+local function AutoClaimGifts()
+    RemoteFunction:InvokeServer("ClaimPlaytime", 1)
+    wait(0.5)
+end
+
+-- Fonction pour améliorer les buffs de maîtrise
+local function AutoUpgradeMastery()
+    if CurrentGems >= 10000 then
+        RemoteEvent:FireServer("UpgradeMastery", "Shops")
+        wait(0.5)
+    end
+end
+
+-- Boucle principale
+local function MainLoop()
+    while Active do
+        UpdatePlayerData()
+        if bgsInfConfig.AUTO_UPDATE_RESTART then
+            -- Placeholder pour la logique de redémarrage
+        end
+        UnlockIslands()
+        AutoBlowSell()
+        AutoBuyFlavorsStorage()
+        AutoEquipPets()
+        AutoEnchantPets()
+        AutoDeletePets()
+        AutoHatchEggs()
+        AutoBuyShops()
+        AutoPotions()
+        AutoConsumePowerups()
+        AutoMysteryBox()
+        AutoTickets()
+        AutoHatchSeasonEggs()
+        AutoGoldenOrbs()
+        AutoClaimPrizes()
+        AutoSpinWheel()
+        AutoOpenChests()
+        AutoClaimGifts()
+        AutoUpgradeMastery()
+        wait(1)
+    end
+end
+
+-- Gestion du bouton Toggle
+ToggleButton.MouseButton1Click:Connect(function()
+    Active = not Active
+    ToggleButton.Text = Active and "DÉSACTIVER" or "ACTIVER"
+    ToggleButton.BackgroundColor3 = Active and Color3.fromRGB(160, 60, 60) or Color3.fromRGB(60, 160, 60)
+    if Active then
+        spawn(MainLoop)
+    end
+end)
+
+-- Gestion du bouton de fermeture
+CloseButton.MouseButton1Click:Connect(function()
+    Active = false
+    ScreenGui:Destroy()
+end)
+
+-- Animation des boutons
+local function CreateButtonHover(button)
+    local originalColor = button.BackgroundColor3
+    button.MouseEnter:Connect(function()
+        TweenService:Create(button, TweenInfo.new(0.2), {BackgroundColor3 = originalColor + Color3.fromRGB(50, 50, 50)}):Play()
+    end)
+    button.MouseLeave:Connect(function()
+        TweenService:Create(button, TweenInfo.new(0.2), {BackgroundColor3 = originalColor}):Play()
+    end)
+end
+
+CreateButtonHover(ToggleButton)
+CreateButtonHover(CloseButton)
+
+-- Instructions :
+-- - Activez le script via le bouton ACTIVER.
+-- - Modifiez bgsInfConfig pour personnaliser les actions.
+-- - Certaines actions (ex. : Redeem Codes, Daily Stars) ne sont pas implémentées faute de Remote Events.
+-- - Vérifiez les Remote Events manquants (ex. : RestockShop, ConsumeElixir) pour des mises à jour futures.
